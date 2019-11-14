@@ -2,12 +2,12 @@ class control():
     intrucion = []
     RegDst = []
     Branch = []
-    MemReadu = false
-    MemtoReg = false
-    ALUOp = false
-    Memwrite = false
-    ALUSrc = false
-    RegWrite false
+    MemReadu = False
+    MemtoReg = False
+    ALUOp = False
+    Memwrite = False
+    ALUSrc = False
+    RegWrite = False
 
     def setIntrucion(self, strucion_final):
         self.intrucion = strucion_final
@@ -37,28 +37,28 @@ class control():
         self.ALUSrc = state
 
     def getIntrucion(self):
-        return = self.strucion
+        return self.strucion
 
     def getRegDst(self):
-        return = self.RegDst
+        return self.RegDst
 
     def getBranch(self):
-        return = self.Branch
+        return self.Branch
 
     def getMemReadu(self):
-        return = self.MemReadu
+        return self.MemReadu
 
     def getMemtoReg(self):
-        return = self.MemtoReg
+        return self.MemtoReg
 
     def getALUOp(self):
-        return = self.ALUOp
+        return self.ALUOp
 
     def getMemwrite(self):
-        return =  self.Memwrite
+        return self.Memwrite
 
     def getRegWrite(self):
-        return  = self.RegWrite
+        return self.RegWrite
 
     def getALUSrc(self):
-        return  =  self.ALUSrc
+        return self.ALUSrc
