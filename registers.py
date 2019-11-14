@@ -1,8 +1,8 @@
 class registers:
-    RegWrite = false
-    Read_register_1 = false
-    Read_register_2 = false
-    Write_register = false
+    RegWrite = False
+    Read_register_1 = False
+    Read_register_2 = False
+    Write_register = False
     Write_data = []
     Read_data_1 = []
     Read_data_2 = []
@@ -25,11 +25,11 @@ class registers:
     def getRead_data_1(self):
         return self.Read_data_1
 
-    def getRead_register_2(self, state):
+    def getRead_register_2(self):
         return self.Read_register_2
 
-    def getWitre_register(self, state):
+    def getWitre_register(self):
         return self.Write_register
 
-    def setWrite_data(self, state):
+    def setWrite_data(self):
         return self.Write_data
