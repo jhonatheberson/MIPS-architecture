@@ -7,5 +7,15 @@ Original file is located at
     https://colab.research.google.com/drive/1qDJreKJKbFq782AlQ5-5ct31WRQGE6lq
 """
 
-def add (v1):
-   return v1+4
+class Add():
+   input = None
+   output = None
+
+   def add(self):
+      self.output = self.input+4
+
+   def setAdd(self, input):
+      self.input = input
+
+   def getAdd(self):
+      return self.output
