@@ -7,6 +7,46 @@ Original file is located at
     https://colab.research.google.com/drive/1FOHVk07qa3p3PdwaBQY-YcDLPclPfC99
 """
 
-def datamemory(adress, writedata,Memwrite,Memread):
-  return datamemory,
-  return readdata
+class DataMemory():
+  adress = []
+  writeData = []
+  MemWrite = []
+  MemRead = []
+  dataMemory = []
+  readData = []
+
+  def setAdress(self, adress):
+    self.adress = adress
+
+  def setWriteData(self, writeData):
+    self.writeData = writeData
+
+  def setMemWrite(self, MemWrite):
+    self.MemWrite = MemWrite
+
+  def setMemRead(self, MemRead):
+    self.MemRead = MemRead
+
+  def setdataMemory(self, dataMemory):
+    self.dataMemory = dataMemory
+
+  def setreadData(self, readData):
+    self.readData = readData
+
+  def getAdress(self):
+    return self.adress
+
+  def getWriteData(self):
+    return self.writeData
+
+  def getMemWrite(self):
+    return self.MemWrite
+
+  def getMemRead(self):
+    return self.MemRead
+
+  def getdataMemory(self):
+    return self.dataMemory
+
+  def getreadData(self):
+    return self.readData
