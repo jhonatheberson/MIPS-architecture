@@ -13,28 +13,40 @@ import re
 
 global zero
 zero = 0
+
 global t0, t1, t2, t3, t4,t5, t6, t7
 global s0, s1, s2, s3, s4, s5, s6, s7
 global t8, t9
 
+s1 =0
 arq = open('programa.asm', 'r')
 instrucao = arq.readlines()
 
 for linha in instrucao:
-    result = linha.split()
+    linha =  linha.replace('$','') #substituindo '$' por '' (nada)
+    linha =  linha.replace(',','') #substituindo ',' por '' (nada)
+    linha = linha.strip() #tirado espaços a direita e esquerda desnecessarios
+    result = linha.split() # separando cada palavra em uma lista
+    print(result)
 
     if(result[0] == 'ADDI'):
-        ALU = alu.ALU
-        #ALU.setOpcode(alu, 0)
-        #ALU.setFunct(alu,32)
-        #ALU.setRd(alu, result[1])
-        #ALU.setRs(alu,zero)
-        #ALU.setRt(alu, int(result[3]))
-        #ALU.alu(alu)
-        print(result[1])
-        print(result[2])
-        print(result[3])
-        result[1]:2
+        AL = alu.ALU
+        AL.setOpcode(AL, 0)
+        #print(AL.getOpcode(AL))
+        AL.setFunct(AL,32)
+        #print(AL.getFunct(AL))
+        AL.setRd(AL, result[1])
+        #print(AL.getRd(AL))
+        AL.setRs(AL,0)
+        #print(AL.getRs(AL))
+        AL.setRt(AL, int(result[3]))
+        #print(AL.getRt(AL))
+
+        result[1] = AL.alu(AL)
+
+        print(s1)
+        print(result)
+
 
 
     elif(result[0] == 'ADD'):

@@ -6,57 +6,60 @@ class ALU():
     shamt = None
     funct = None
 
+    def teste(self):
+        print('teste')
+
     def alu(self):
-        if self.opcode == 0 & self.funct == 32:
-            Rd = Rs + Rt
+        if (self.opcode == 0 and self.funct == 32):
+            self.Rd = self.Rs + self.Rt
+            return self.Rd
+        elif (self.opcode == 0 and self.funct == 34):
+            self.Rd = self.Rs - self.Rt
             return Rd
-        elif self.opcode == 0 & self.funct == 34:
-            Rd = Rs - Rt
+        elif (self.opcode == 8 and self.funct == 1):
+            self.Rd = self.Rs + self.Rt
             return Rd
-        elif self.opcode == 8 & self.funct == 1:
-            Rd = Rs + Rt
-            return Rd
-        elif (self.opcode == 4 & self.funct == 1): # tipo I == 1
+        elif (self.opcode == 4 and self.funct == 1): # tipo I == 1
             print('não sei o que "BEQ"')
-        elif (self.opcode == 2 & self.funct == 2): # tipo J == 2
+        elif (self.opcode == 2 and self.funct == 2): # tipo J == 2
             print('nao sei o que "J"')
-        elif (self.opcode == 35 & self.funct == 1):
+        elif (self.opcode == 35 and self.funct == 1):
             print('nao sei o que "J"')
-        else:
+        elif(self.opcode == 43 and self.funct == 1):
             print('nao sei o que "J"')
 
-    def setOpcode(self, opcode):
-        self.opcode = opcode
+    def setOpcode(self, opcode_final):
+        self.opcode = opcode_final
 
-    def setRs(self, Rs):
-        self.Rs = Rs
+    def setRs(self, Rs_final):
+        self.Rs = Rs_final
 
-    def setRt(self, Rt):
-        self.Rt = Rt
+    def setRt(self, Rt_final):
+        self.Rt = Rt_final
 
-    def setRd(self, Rd):
-        self.Rd = Rd
+    def setRd(self, Rd_final):
+        self.Rd = Rd_final
 
-    def setShamt(self, shamt):
-        self.shamt = shamt
+    def setShamt(self, shamt_final):
+        self.shamt = shamt_final
 
-    def setFunct(self, funct):
-        self.funct = funct
+    def setFunct(self, funct_final):
+        self.funct = funct_final
 
     def getOpcode(self):
         return self.opcode
 
-    def setRs(self):
+    def getRs(self):
         return self.Rs
 
-    def setRt(self):
+    def getRt(self):
         return self.Rt
 
-    def setRd(self):
+    def getRd(self):
         return self.Rd
 
-    def setShamt(self):
+    def getShamt(self):
         return self.shamt
 
-    def setFunct(self):
+    def getFunct(self):
         return self.funct
