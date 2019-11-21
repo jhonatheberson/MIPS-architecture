@@ -1,16 +1,32 @@
-class control():
-    intrucion = []
-    RegDst = []
-    Branch = []
-    MemReadu = False
-    MemtoReg = False
-    ALUOp = False
-    Memwrite = False
-    ALUSrc = False
-    RegWrite = False
+class Control():
+    def __init__(self):
+        self.intrucion = [None, None]
+        self.RegDst = False
+        self.Branch = False
+        self.MemReadu = False
+        self.MemtoReg = False
+        self.ALUOp = None
+        self.Memwrite = False
+        self.ALUSrc = False
+        self.RegWrite = False
 
-    def setIntrucion(self, strucion_final):
-        self.intrucion = strucion_final
+    def control(self):
+        if(self.intrucion[0] == '000000' and self.intrucion[1] == '32'):
+            self.RegDst = True
+            self.ALUOp = 0
+            self.RegWrite = True
+        elif(self.intrucion[0] == '000000' and self.intrucion[1] == '34'):
+            self.RegDst = True
+            self.ALUOp = 1
+            self.RegWrite = True
+        elif(self.intrucion[0] == '001000' and self.intrucion[1] == '8'):
+            self.RegDst = True
+            self.ALUOp = 2
+            self.RegWrite = True
+
+    def setIntrucion(self, strucion_final_0, strucion_final_1):#como melhorar isso?
+        self.intrucion[0] = strucion_final_0
+        self.intrucion[1] = strucion_final_1
 
     def setRegDst(self, RegDst_final):
         self.RegDst = RegDst_final
@@ -37,7 +53,7 @@ class control():
         self.ALUSrc = state
 
     def getIntrucion(self):
-        return self.strucion
+        return self.intrucion
 
     def getRegDst(self):
         return self.RegDst

@@ -1,35 +1,28 @@
 class ALU():
-    opcode = None
-    Rs = None
-    Rt = None
-    Rd = None
-    shamt = None
-    funct = None
+    def __init__(self):
+        self.Rs = None
+        self.Rt = None
+        self.Rd = None
 
-    def teste(self):
-        print('teste')
-
-    def alu(self):
-        if (self.opcode == 0 and self.funct == 32):
+    def alu(self, opcode):
+        if  (opcode == 0):
             self.Rd = self.Rs + self.Rt
             return self.Rd
-        elif (self.opcode == 0 and self.funct == 34):
+        elif (opcode == 1):
             self.Rd = self.Rs - self.Rt
-            return Rd
-        elif (self.opcode == 8 and self.funct == 1):
-            self.Rd = self.Rs + self.Rt
-            return Rd
-        elif (self.opcode == 4 and self.funct == 1): # tipo I == 1
+            return self.Rd
+        elif (opcode == 2):
+            self.Rd = int(0) + self.Rt
+            return self.Rd
+        elif (opcode == 3): # tipo I == 1
             print('não sei o que "BEQ"')
-        elif (self.opcode == 2 and self.funct == 2): # tipo J == 2
+        elif (opcode == 4): # tipo J == 2
             print('nao sei o que "J"')
-        elif (self.opcode == 35 and self.funct == 1):
+        elif (opcode == 5 ):
             print('nao sei o que "J"')
-        elif(self.opcode == 43 and self.funct == 1):
+        elif(opcode == 6):
             print('nao sei o que "J"')
 
-    def setOpcode(self, opcode_final):
-        self.opcode = opcode_final
 
     def setRs(self, Rs_final):
         self.Rs = Rs_final
@@ -40,15 +33,6 @@ class ALU():
     def setRd(self, Rd_final):
         self.Rd = Rd_final
 
-    def setShamt(self, shamt_final):
-        self.shamt = shamt_final
-
-    def setFunct(self, funct_final):
-        self.funct = funct_final
-
-    def getOpcode(self):
-        return self.opcode
-
     def getRs(self):
         return self.Rs
 
@@ -58,8 +42,4 @@ class ALU():
     def getRd(self):
         return self.Rd
 
-    def getShamt(self):
-        return self.shamt
 
-    def getFunct(self):
-        return self.funct
