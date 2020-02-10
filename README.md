@@ -4,7 +4,7 @@ mips architecture simulator made in python, is a RISC microprocessor architectur
 
 ## Arquitetura do Neander
 
-![Mips](https://github.com/jhonatheberson/MIPS-architecture/arquitetura.png)
+![Mips](https://github.com/jhonatheberson/MIPS-architecture/blob/master/arquitetura.png)
 
 ## Getting Started
 
@@ -12,9 +12,9 @@ clone this repository and run the main file interpreted with python.
 
 ###  Execution
 
-![Bank register](https://github.com/jhonatheberson/MIPS-architecture/bank-register.png)
+![Bank register](https://github.com/jhonatheberson/MIPS-architecture/blob/master/bank-register.png)
 
-![Execution](https://github.com/jhonatheberson/MIPS-architecture/execution.png)
+![Execution](https://github.com/jhonatheberson/MIPS-architecture/blob/master/execution.png)
 
 
 
