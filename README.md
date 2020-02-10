@@ -2,7 +2,7 @@
 
 mips architecture simulator made in python, is a RISC microprocessor architecture developed by MIPS Computer Systems. In the mid-1990s it was estimated that one in three RISC microprocessors was MIPS.
 
-## Arquitetura do Neander
+## Arquitetura do Mips
 
 ![Mips](https://github.com/jhonatheberson/MIPS-architecture/blob/master/arquitetura.png)
 
